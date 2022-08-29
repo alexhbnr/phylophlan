@@ -283,7 +283,7 @@ def get_core_proteins(taxa2core_file, taxa_label, output, output_extension, verb
 
         if taxa_label in r_clean[1]:
             if taxa_label == r_clean[1].split('|')[-1]:
-                url = r_clean[2]
+                url = "https://rest.uniprot.org/uniprotkb/{}.fasta" # r_clean[2]
                 core_proteins[r_clean[1]] = r_clean[3].split(';')
                 break
             else:
